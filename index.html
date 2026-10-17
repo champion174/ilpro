@@ -33,7 +33,7 @@
       </button>
       <div class="pt-2 flex flex-col gap-2 items-center">
         <button onclick="startDemoMode()" class="text-xs font-medium text-emerald-400 hover:underline">
-          ✨ Try Instant Demo (Pre-loaded with Sri Shivasaadhvi Traders Data)
+          ✨ Try Instant Demo (Pre-loaded with Sample Demo Store Data)
         </button>
         <button onclick="toggleSetupGuide()" class="text-xs text-indigo-400 underline">
           How to obtain the web app URL?
@@ -57,7 +57,7 @@
     <div class="flex items-center gap-2.5">
       <img id="headerLogoPreview" src="" alt="Logo" class="w-8 h-8 rounded object-contain bg-white p-0.5" />
       <div>
-        <h2 id="topCompanyName" class="text-sm font-bold text-white leading-tight">SRI SHIVASAADHVI TRADERS</h2>
+        <h2 id="topCompanyName" class="text-sm font-bold text-white leading-tight">ACME DEMO TRADERS</h2>
         <p id="syncStatusBadge" class="text-[11px] text-emerald-400">● Ready</p>
       </div>
     </div>
@@ -323,25 +323,25 @@
     let state = {
       webAppUrl: localStorage.getItem("GST_WEB_APP_URL") || "",
       settings: {
-        CompanyName: "SRI SHIVASAADHVI TRADERS",
-        AddressLine1: "No. 145/40, Ward No. 29, 3rd block, St. Joseph School Road, S.A. Devappa Layout,",
-        AddressLine2: "Chikkaballapura, Karnataka - 562101",
-        GSTIN: "29GKB PM9704E1ZY",
-        Phone: "7975203871",
-        BankName: "Union Bank of India (Chikkaballapura Branch)",
-        AccountNo: "115321010000116",
-        IFSC: "UBIN0911534",
-        Jurisdiction: "Chikkaballapura",
-        NextInvoiceNo: 10,
+        CompanyName: "ACME DEMO TRADERS",
+        AddressLine1: "101, Demo Business Park, Main Road, Sample Layout,",
+        AddressLine2: "Bengaluru, Karnataka - 560001",
+        GSTIN: "29XXXXX0000X1Z5",
+        Phone: "91XXXXXXX0",
+        BankName: "Sample State Bank (Main Branch)",
+        AccountNo: "000011112222333",
+        IFSC: "SAMP0001234",
+        Jurisdiction: "Bengaluru",
+        NextInvoiceNo: 105,
         HeaderLogo: DEFAULT_HEADER_LOGO,
         WatermarkLogo: DEFAULT_WATERMARK_LOGO,
         WatermarkOpacity: 0.05
       },
-      products: [{"name": "Bathla Advance Foldable ladder", "hsn": "NA", "rate": 4958, "gst": 18, "unit": "1"}, {"name": "KA Kundal plus 500ml", "hsn": "283329", "rate": 264.0, "gst": 12, "unit": "1"}, {"name": "KA High Zinc 10kg", "hsn": "283329", "rate": 564.0, "gst": 12, "unit": "1"}, {"name": "KA High Zinc 5kg", "hsn": "283329", "rate": 295.0, "gst": 12, "unit": "1"}, {"name": "KA Magic Spray 2kgs", "hsn": "283329", "rate": 239.0, "gst": 12, "unit": "1"}, {"name": "KA Kamal 500gm", "hsn": "283329", "rate": 71.0, "gst": 12, "unit": "1"}, {"name": "Spinter 100ml", "hsn": "3808", "rate": 240.0, "gst": 18, "unit": "1"}, {"name": "Spinter 250ml", "hsn": "3808", "rate": 550.0, "gst": 18, "unit": "1"}, {"name": "Emamectin Bezoatye5%SG 100grm", "hsn": "3808", "rate": 135.0, "gst": 18, "unit": "1"}, {"name": "Boa 505 250ml", "hsn": "3808", "rate": 155.0, "gst": 18, "unit": "1"}, {"name": "Boa 505 500ml", "hsn": "3808", "rate": 300.0, "gst": 18, "unit": "1"}, {"name": "Boa 505 1ltr", "hsn": "3808", "rate": 577.0, "gst": 18, "unit": "1"}, {"name": "Dangal 1ltr", "hsn": "3808", "rate": 535.0, "gst": 18, "unit": "1"}, {"name": "Dangal 500ml", "hsn": "38089199", "rate": 280.0, "gst": 18, "unit": "1"}, {"name": "Combi404 250ml", "hsn": "3808", "rate": 161.0, "gst": 18, "unit": "1"}, {"name": "Combi404 500ml", "hsn": "3808", "rate": 297.0, "gst": 18, "unit": "1"}, {"name": "Maabor 20% 250grm", "hsn": "281000", "rate": 128.0, "gst": 18, "unit": "1"}, {"name": "P.A.Roots 250grm", "hsn": "3808", "rate": 130.0, "gst": 18, "unit": "1"}, {"name": "Ace 75 250grm", "hsn": "3808", "rate": 170.0, "gst": 18, "unit": "1"}, {"name": "Ace 75 500grm", "hsn": "3808", "rate": 320.0, "gst": 18, "unit": "1"}, {"name": "Chomphos 500ml", "hsn": "3808", "rate": 250.0, "gst": 18, "unit": "1"}, {"name": "Chomphos 250ml", "hsn": "3808", "rate": 130.0, "gst": 18, "unit": "1"}, {"name": "Extreme5%EC 500ml", "hsn": "3808", "rate": 205.0, "gst": 18, "unit": "1"}, {"name": "Carman 250grm", "hsn": "3808", "rate": 130.0, "gst": 18, "unit": "1"}, {"name": "Carman 500grm", "hsn": "3808", "rate": 245.0, "gst": 18, "unit": "1"}, {"name": "Carman 1kg", "hsn": "3808", "rate": 450.0, "gst": 18, "unit": "1"}, {"name": "Pa Boost 250ml", "hsn": "2833", "rate": 130.0, "gst": 12, "unit": "1"}, {"name": "Active Super80-1ltr", "hsn": "3402", "rate": 230.0, "gst": 18, "unit": "1"}, {"name": "Active Super80-500ml", "hsn": "3402", "rate": 140.0, "gst": 18, "unit": "1"}, {"name": "Active Super80-250ml", "hsn": "3402", "rate": 75.0, "gst": 18, "unit": "1"}, {"name": "Active Super80-5ltr", "hsn": "3402", "rate": 1020.0, "gst": 18, "unit": "1"}, {"name": "Active Super80-100ml", "hsn": "3402", "rate": 45.0, "gst": 18, "unit": "1"}, {"name": "Advent kaveri 100ml", "hsn": "31010099", "rate": 60.0, "gst": 5, "unit": "1"}, {"name": "Advent kaveri 250ml", "hsn": "31010099", "rate": 135.0, "gst": 5, "unit": "1"}, {"name": "Advent kaveri 500ml", "hsn": "31010099", "rate": 260.0, "gst": 5, "unit": "1"}, {"name": "Advent kaveri 1ltr", "hsn": "31010099", "rate": 500.0, "gst": 5, "unit": "1"}, {"name": "Advent Humicel 6G", "hsn": "31010099", "rate": 315.0, "gst": 5, "unit": "1"}, {"name": "Kantar 1ltr", "hsn": "38089199", "rate": 255.0, "gst": 18, "unit": "1"}, {"name": "Kantar 5ltr", "hsn": "38089199", "rate": 1200.0, "gst": 18, "unit": "1"}, {"name": "Aster 71% 1kg", "hsn": "3808", "rate": 457.0, "gst": 18, "unit": "1"}, {"name": "PX CLAIM 250gm", "hsn": "3808", "rate": 313.0, "gst": 18, "unit": "1"}, {"name": "MAA 00 1kg", "hsn": "310590", "rate": 160.0, "gst": 12, "unit": "1"}],
-      customers: [{"name": "Sairam Agro Fertilizers and Irrigation", "address": "Manchanabale, Chikkaballapura, Karnataka, 562101", "phone": "9945469438", "gstin": "NA", "openingBal": 0}, {"name": "Atree Srirampura", "address": "20/1G, Somu Building, 2nd Floor, Bagepalli", "phone": "9886282778", "gstin": "NA", "openingBal": 0}, {"name": "Sri Shivassadvi Traders", "address": "St. Joseph School Road, Chikkaballapur", "phone": "7975203871", "gstin": "29GKBPM9704E1ZY", "openingBal": 0}, {"name": "Sri Kalikamba Traders", "address": "Near Darga Mohalla, Chikkaballapur", "phone": "7975203871", "gstin": "29GKBPM9704E1ZY", "openingBal": 0}, {"name": "Mahadeva", "address": "Mustoor Village Chikkaballapura", "phone": "", "gstin": "NA", "openingBal": 0}, {"name": "Dinesh Kumar J", "address": "Gauribidanur", "phone": "9343161827", "gstin": "NA", "openingBal": 0}, {"name": "Srinivas KM", "address": "Kandavara, Chikkaballapura", "phone": "9845264930", "gstin": "NA", "openingBal": 0}, {"name": "Maheshwari Agro Seeds", "address": "Opp SBI, B.B.Road Chikkaballapura-562101", "phone": "9886966504", "gstin": "29BVSPM2610L1Z2", "openingBal": 0}, {"name": "Muniyappa", "address": "Mustoor Village Chikkaballapura", "phone": "", "gstin": "NA", "openingBal": 0}, {"name": "Byrappa", "address": "Dinnehosahalli Chikkaballapura", "phone": "", "gstin": "NA", "openingBal": 0}],
-      transactions: [{"date": "2025-09-02", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "254", "particulars": "To GST Sales 18%", "debit": 20031, "credit": 0}, {"date": "2025-09-03", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "255", "particulars": "To GST Sales 18%", "debit": 16190, "credit": 0}, {"date": "2025-09-05", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "259", "particulars": "To GST Sales 18%", "debit": 15517, "credit": 0}, {"date": "2025-09-08", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "262", "particulars": "To GST Sales 18%", "debit": 24214, "credit": 0}, {"date": "2025-09-08", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Receipt", "vchNo": "", "particulars": "By Cash", "debit": 0, "credit": 30000}, {"date": "2025-09-12", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "268", "particulars": "To GST Sales 18%", "debit": 10384, "credit": 0}, {"date": "2025-09-18", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "277", "particulars": "To GST Sales 18%", "debit": 17747, "credit": 0}, {"date": "2025-09-18", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Receipt", "vchNo": "", "particulars": "By Cash", "debit": 0, "credit": 20000}, {"date": "2025-09-19", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "280", "particulars": "To GST Sales 18%", "debit": 10620, "credit": 0}, {"date": "2025-09-26", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "286", "particulars": "To GST Sales 18%", "debit": 10573, "credit": 0}, {"date": "2025-10-07", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "292", "particulars": "To GST Sales 18%", "debit": 5263, "credit": 0}, {"date": "2025-10-08", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "294", "particulars": "To GST Sales 18%", "debit": 27447, "credit": 0}, {"date": "2025-10-13", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "298", "particulars": "To GST Sales 18%", "debit": 10573, "credit": 0}, {"date": "2025-10-25", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "310", "particulars": "To GST Sales 18%", "debit": 10526, "credit": 0}, {"date": "2025-11-05", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "316", "particulars": "To GST Sales 18%", "debit": 16426, "credit": 0}, {"date": "2025-12-02", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "328", "particulars": "To GST Sales 18%", "debit": 11422, "credit": 0}, {"date": "2025-12-11", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "335", "particulars": "To GST Sales 18%", "debit": 17747, "credit": 0}, {"date": "2026-01-02", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "348", "particulars": "To GST Sales 18%", "debit": 5286, "credit": 0}, {"date": "2026-01-19", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "360", "particulars": "To GST Sales 18%", "debit": 11422, "credit": 0}, {"date": "2026-02-13", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "368", "particulars": "To GST Sales 18%", "debit": 6042, "credit": 0}, {"date": "2026-02-23", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "373", "particulars": "To GST Sales 18%", "debit": 6419, "credit": 0}, {"date": "2026-02-23", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Receipt", "vchNo": "", "particulars": "By Cash", "debit": 0, "credit": 40000}, {"date": "2026-03-02", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Receipt", "vchNo": "", "particulars": "By Cash", "debit": 0, "credit": 45000}, {"date": "2026-03-02", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "378", "particulars": "To GST Sales 18%", "debit": 12461, "credit": 0}, {"date": "2026-03-03", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "381", "particulars": "To GST Sales 18%", "debit": 6042, "credit": 0}, {"date": "2026-03-06", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "390", "particulars": "To GST Sales 18%", "debit": 12461, "credit": 0}, {"date": "2026-03-06", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Receipt", "vchNo": "", "particulars": "By Cash", "debit": 0, "credit": 40000}, {"date": "2026-03-16", "customerName": "Sairam Agro Fertilizers and Irrigation", "vchType": "Sales", "vchNo": "398", "particulars": "To GST Sales 18%", "debit": 6042, "credit": 0}],
+      products: [{"name": "Alpha Crop Booster 500ml", "hsn": "3808", "rate": 250.0, "gst": 18, "unit": "1"}, {"name": "Beta Organic Fertilizer 5kg", "hsn": "3101", "rate": 420.0, "gst": 5, "unit": "1"}, {"name": "Delta Drip Emitter Pack", "hsn": "8424", "rate": 680.0, "gst": 12, "unit": "1"}, {"name": "Eco Shield Spray 250ml", "hsn": "3808", "rate": 185.0, "gst": 18, "unit": "1"}, {"name": "Gamma Micronutrient Mix 1kg", "hsn": "2833", "rate": 310.0, "gst": 12, "unit": "1"}, {"name": "Hydro Flow PVC Valve 2-inch", "hsn": "3917", "rate": 145.0, "gst": 18, "unit": "1"}, {"name": "MaxYield Bio Granules 10kg", "hsn": "3105", "rate": 590.0, "gst": 12, "unit": "1"}, {"name": "Multi-Purpose Foldable Ladder", "hsn": "7616", "rate": 4500.0, "gst": 18, "unit": "1"}, {"name": "Nova Plant Tonic 1ltr", "hsn": "3808", "rate": 520.0, "gst": 18, "unit": "1"}, {"name": "Prime Soil Conditioner 2kg", "hsn": "3101", "rate": 210.0, "gst": 5, "unit": "1"}],
+      customers: [{"name": "Apex Hardware & Tools", "address": "12, MG Road, Sample Nagar - 560001", "phone": "91XXXXXXX1", "gstin": "29AAAAA0000A1Z5", "openingBal": 0}, {"name": "BlueSky Enterprises", "address": "45, Industrial Area, Phase 2 - 560002", "phone": "91XXXXXXX2", "gstin": "NA", "openingBal": 0}, {"name": "Crescent General Store", "address": "78, Market Square, Demo Town - 560003", "phone": "91XXXXXXX3", "gstin": "NA", "openingBal": 0}, {"name": "GreenValley Supplies", "address": "Plot 9, Main Bazaar, Sector 4 - 560004", "phone": "91XXXXXXX4", "gstin": "29BBBBB1111B1Z2", "openingBal": 0}, {"name": "Metro Retail Mart", "address": "104, Station Road, West Block - 560005", "phone": "91XXXXXXX5", "gstin": "NA", "openingBal": 0}, {"name": "Sunrise Agro & Irrigation", "address": "22, Highway Cross, Model Colony - 560006", "phone": "91XXXXXXX6", "gstin": "29CCCCC2222C1Z9", "openingBal": 0}],
+      transactions: [{"date": "2025-09-02", "customerName": "Sunrise Agro & Irrigation", "vchType": "Sales", "vchNo": "101", "particulars": "To GST Sales 18%", "debit": 15000, "credit": 0}, {"date": "2025-09-08", "customerName": "Sunrise Agro & Irrigation", "vchType": "Sales", "vchNo": "102", "particulars": "To GST Sales 18%", "debit": 12500, "credit": 0}, {"date": "2025-09-10", "customerName": "Sunrise Agro & Irrigation", "vchType": "Receipt", "vchNo": "", "particulars": "By Cash", "debit": 0, "credit": 10000}, {"date": "2025-10-04", "customerName": "Sunrise Agro & Irrigation", "vchType": "Sales", "vchNo": "103", "particulars": "To GST Sales 12%", "debit": 8400, "credit": 0}, {"date": "2025-11-12", "customerName": "Sunrise Agro & Irrigation", "vchType": "Receipt", "vchNo": "", "particulars": "By UPI / Bank", "debit": 0, "credit": 15000}, {"date": "2026-01-15", "customerName": "Sunrise Agro & Irrigation", "vchType": "Sales", "vchNo": "104", "particulars": "To GST Sales 18%", "debit": 9600, "credit": 0}],
       currentBillItems: [
-        { name: "Bathla Advance Foldable ladder", hsn: "NA", gst: 18, qtyLabel: "1", rate: 4958, per: 1, disc: 0, amount: 4958 }
+        { name: "Alpha Crop Booster 500ml", hsn: "3808", gst: 18, qtyLabel: "1", rate: 250, per: 2, disc: 0, amount: 500 }
       ]
     };
 
@@ -364,6 +364,18 @@
       refreshAllUI();
     }
 
+    function normalizeIsoDate(val) {
+      if (!val) return "";
+      const s = String(val).trim();
+      if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
+      const d = new Date(s);
+      if (isNaN(d.getTime())) return s;
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, "0");
+      const dd = String(d.getDate()).padStart(2, "0");
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
     async function connectGoogleSheet() {
       const url = document.getElementById("webAppUrlInput").value.trim();
       if (!url.startsWith("https://script.google.com")) {
@@ -372,18 +384,36 @@
       }
       localStorage.setItem("GST_WEB_APP_URL", url);
       state.webAppUrl = url;
-      document.getElementById("syncStatusBadge").innerText = "● Syncing with Google Sheet...";
+      const badge = document.getElementById("syncStatusBadge");
+      badge.innerText = "● Syncing with Google Sheet...";
+      badge.className = "text-[11px] text-amber-400";
       try {
-        const res = await fetch(url);
-        const data = await res.json();
+        const sep = url.includes("?") ? "&" : "?";
+        const res = await fetch(`${url}${sep}t=${Date.now()}`, {
+          method: "GET",
+          redirect: "follow",
+          headers: { "Accept": "application/json, text/plain, */*" }
+        });
+        const text = await res.text();
+        let data;
+        try {
+          data = JSON.parse(text);
+        } catch (parseErr) {
+          throw new Error("Google Sheet returned an HTML login/error page instead of JSON. Make sure you saved the file as a native Google Sheet (File > Save as Google Sheets) and set Web App 'Who has access' to 'Anyone'.");
+        }
         if (data.settings && data.settings.CompanyName) state.settings = { ...state.settings, ...data.settings };
         if (data.products && data.products.length) state.products = data.products;
         if (data.customers && data.customers.length) state.customers = data.customers;
-        if (data.transactions && data.transactions.length) state.transactions = data.transactions;
-        document.getElementById("syncStatusBadge").innerText = "● Connected to Google Sheet";
+        if (data.transactions && data.transactions.length) {
+          state.transactions = data.transactions.map(t => ({ ...t, date: normalizeIsoDate(t.date) }));
+        }
+        badge.innerText = "● Live Synced with Google Sheet";
+        badge.className = "text-[11px] text-emerald-400";
       } catch (err) {
-        console.warn("Using local cache/fallback:", err);
-        document.getElementById("syncStatusBadge").innerText = "● Connected (Cached Mode)";
+        console.warn("Google Sheet sync error:", err);
+        badge.innerText = "● Offline / Cached Mode (Check URL)";
+        badge.className = "text-[11px] text-amber-400";
+        alert("Could not fetch live Google Sheet data:\n\n" + err.message);
       }
       document.getElementById("authScreen").classList.add("hidden");
       refreshAllUI();
@@ -407,12 +437,24 @@
       document.getElementById("headerLogoPreview").src = state.settings.HeaderLogo;
       document.getElementById("invNo").value = state.settings.NextInvoiceNo || 10;
 
+      // Sort Customers & Products alphabetically (A -> Z) for easy lookup
+      state.customers.sort((a, b) => String(a.name || "").localeCompare(String(b.name || ""), undefined, { sensitivity: "base" }));
+      state.products.sort((a, b) => String(a.name || "").localeCompare(String(b.name || ""), undefined, { sensitivity: "base" }));
+
       // Populate Customer Dropdowns
       const invCustSel = document.getElementById("invCustomerSelect");
       const ledCustSel = document.getElementById("ledgerCustomerSelect");
+      const prevInvCust = invCustSel.value !== "" && state.customers[invCustSel.value] ? state.customers[invCustSel.value].name : (state.customers[0]?.name || "");
+      const prevLedCust = ledCustSel.value || (state.customers[state.customers.length - 1]?.name || "");
+
       invCustSel.innerHTML = state.customers.map((c, i) => `<option value="${i}">${c.name}</option>`).join("");
-      ledCustSel.innerHTML = state.customers.map((c, i) => `<option value="${c.name}">${c.name}</option>`).join("");
-      invCustSel.selectedIndex = 1; // Default to Atree Srirampura for Invoice demo
+      ledCustSel.innerHTML = state.customers.map((c) => `<option value="${c.name}">${c.name}</option>`).join("");
+
+      const restoreInvIdx = state.customers.findIndex(c => c.name === prevInvCust);
+      invCustSel.selectedIndex = restoreInvIdx >= 0 ? restoreInvIdx : 0;
+      if ([...ledCustSel.options].some(o => o.value === prevLedCust)) {
+        ledCustSel.value = prevLedCust;
+      }
       onSelectInvoiceCustomer();
 
       // Populate Product Dropdown
@@ -587,7 +629,7 @@
       const sgst = taxable * (halfGst / 100);
       const grandTotal = Math.round(taxable + cgst + sgst);
 
-      // Save to Ledger Transactions automatically
+      // Save to Ledger Transactions & auto-increment Invoice No immediately in the UI
       if (saveToLedger) {
         const newTx = {
           date: rawDate,
@@ -599,9 +641,15 @@
           credit: 0
         };
         state.transactions.push(newTx);
-        state.settings.NextInvoiceNo = Number(invNo) + 1;
+        const nextNo = (parseInt(invNo, 10) || 0) + 1;
+        state.settings.NextInvoiceNo = nextNo;
+        document.getElementById("invNo").value = nextNo; // Immediately update the input box for the next invoice!
         if (state.webAppUrl) {
-          fetch(state.webAppUrl, { method: "POST", body: JSON.stringify({ action: "ADD_TRANSACTION", data: newTx }) }).catch(() => {});
+          fetch(state.webAppUrl, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify({ action: "ADD_TRANSACTION", data: newTx })
+          }).catch(() => {});
         }
       }
 
@@ -765,6 +813,13 @@
       doc.text("Authorized Signatory", 192, by + 32, { align: "right" });
 
       doc.save(`${formattedDate}_${custName}.pdf`);
+
+      // Reset bill items after saving so user can immediately create the next invoice
+      if (saveToLedger) {
+        state.currentBillItems = [];
+        renderBillItems();
+        renderLedgerView();
+      }
     }
 
     // RENDER PARTY LEDGER VIEW
@@ -845,18 +900,24 @@
       doc.text(state.settings.AddressLine2, 105, 23.5, { align: "center" });
       doc.text(`Mobile No.: ${state.settings.Phone}`, 105, 28, { align: "center" });
 
-      // Customer Header
+      // Customer Header (Removed 'Ledger Account' line between Customer Name and Address)
       doc.setFont("helvetica", "bold");
       doc.setFontSize(11);
       doc.text(partyName, 105, 36, { align: "center" });
       doc.setFont("helvetica", "normal");
       doc.setFontSize(9);
-      doc.text("Ledger Account", 105, 40.5, { align: "center" });
-      if (partyObj.address) doc.text(partyObj.address, 105, 45, { align: "center" });
-      if (partyObj.phone) doc.text(`Mobile No.: ${partyObj.phone}`, 105, 49.5, { align: "center" });
+      let cy = 41;
+      if (partyObj.address) {
+        doc.text(partyObj.address, 105, cy, { align: "center" });
+        cy += 4.5;
+      }
+      if (partyObj.phone) {
+        doc.text(`Mobile No.: ${partyObj.phone}`, 105, cy, { align: "center" });
+        cy += 6;
+      }
 
       doc.setFont("helvetica", "bold");
-      doc.text(`${formatShortDate(fromD)} to ${formatShortDate(toD)}`, 105, 56, { align: "center" });
+      doc.text(`${formatShortDate(fromD)} to ${formatShortDate(toD)}`, 105, cy, { align: "center" });
 
       let totalDebit = 0;
       let totalCredit = 0;
